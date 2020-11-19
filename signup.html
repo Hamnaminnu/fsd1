@@ -35,7 +35,7 @@
     <!-- nav bar ends here -->
 
     <!-- form starts -->
-    <form action="/action_page.php" class="signup" style="border:1px solid #ccc">
+    <form action="res.html" class="signup" style="border:1px solid #ccc" onsubmit="return Validate()">
       <div class="container2">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
@@ -43,23 +43,23 @@
         <label for="text"><b>Name</b></label>
         <input type="text" placeholder="Enter name" name="name" required>
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <input id="email" type="text" placeholder="Enter Email" name="email" required>
+        <label for="phonenumbr"><b>Mobile Number</b></label>
+        <input id="num" type="text" placeholder="Enter Number" name="phonenumbr" required>
+        <label for="psw"><b>Password</b></label><span id="strength"></span>
+        <input id="password" type="password" placeholder="Enter Password" name="psw" onkeyup="return ValidatePassword()" required>
         <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 
         By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
         </label>
         <div class="clearfix">
           <button type="button" class="cancelbtn1">Cancel</button>
-          <button type="submit" class="signupbtn button1">Sign Up</button>
+          <button type="submit" id="submit" class="signupbtn button1">Sign Up</button>
         </div>
       </div>
     </form>
     <!-- form ends -->
-
+    <script src="script.js"></script>
     <!-- footer strats -->
     <div class="footer">
       <p>copyright@kerala-tourism</p>
